@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> HackathonHQ</title>
+  <link rel="stylesheet" href="home.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <div class="img">
+    <div class="center">
+      <div class="title">HackathonHQ</div>
+      <div class="sub_title">Amazing Website for Online Hackathons</div>
+      <div class="btns">
+        <button>Learn More</button>
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="container">
+     <div class="inner-container">
+        <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+        <div>
+            <div>Team Name 1</div>
+            <div>Team Idea 1</div>
+            <div>Rating: <span id="rating1">0</span></div>
+        </div>
+        <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+    </div>
+
+    <div class="inner-container">
+      <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+      <div>
+          <div>Team Name 1</div>
+          <div>Team Idea 1</div>
+          <div>Rating: <span id="rating1">0</span></div>
+      </div>
+      <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+  </div>
+  <div class="inner-container">
+    <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+    <div>
+        <div>Team Name 1</div>
+        <div>Team Idea 1</div>
+        <div>Rating: <span id="rating1">0</span></div>
+    </div>
+    <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+  <div class="inner-container">
+    <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+    <div>
+        <div>Team Name 1</div>
+        <div>Team Idea 1</div>
+        <div>Rating: <span id="rating1">0</span></div>
+    </div> <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<div class="inner-container">
+  <img src="https://i.ibb.co/Ms3n4VJ/team.jpg" alt="team" >
+  <div>
+      <div>Team Name 1</div>
+      <div>Team Idea 1</div>
+      <div>Rating: <span id="rating1">0</span></div>
+  </div>
+  <button class="vote-button" onclick="vote('rating2', 'heart2')">Vote &hearts;</button>
+</div>
+<script>
+  function vote(ratingId, heartId) {
+      const ratingElement = document.getElementById(ratingId);
+      const heartElement = document.getElementById(heartId);
+      const currentRating = parseInt(ratingElement.innerText);
+      ratingElement.innerText = currentRating + 1;
+
+      // Toggle the color of the heart symbol
+      if (heartElement.classList.contains('liked')) {
+          heartElement.classList.remove('liked');
+      } else {
+          heartElement.classList.add('liked');
+      }
+  }
+</script>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Chat</title>
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/nL2ShN3/pexels-junior-teixeira-2047905.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #chat-container {
+
+            width: 500px;
+            margin: 20px auto;
+            border: 1px solid #060606;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #0e0e0d, hsl(0, 0%, 3%));
+            box-shadow: 0 2px 5px rgba(36, 231, 215, 0.975);
+            padding: 10px;
+            color: rgb(254, 254, 254);
+        }
+
+        #messages {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        #message-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            color: white;
+        }
+        #user-button{
+          background-color:#070707;
+          color: rgb(252, 252, 255);
+          height:60px;
+          width: 50px;
+
+        }
+
+        #user-button:hover{
+          background: linear-gradient(45deg, #df19ad, #ca840c);
+            transform: scale(1.05);
+        }
+        #send-button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, hsl(0, 0%, 2%), #060606);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #send-button:hover {
+            background: linear-gradient(45deg, #05d2e5, #c0ea06);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <h1>Internal Chat Box </h1>
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Type a message..." />
+        <div>
+            <button id="user-button" onclick="setUser('User 1')">User 1</button>
+            <button id="user-button" onclick="setUser('User 2')">User 2</button>
+        </div>
+        <button id="send-button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        let currentUser = "User 1";
+
+        function sendMessage() {
+            const messageInput = document.getElementById("message-input");
+            const messages = document.getElementById("messages");
+
+            const message = messageInput.value.trim();
+            if (message) {
+                messages.innerHTML += `<p><strong>${currentUser}:</strong> ${message}</p>`;
+                messageInput.value = "";
+                messages.scrollTop = messages.scrollHeight;
+            }
+        }
+
+        function setUser(user) {
+            currentUser = user;
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- Google Fonts Link For Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+   <style>
+
+/* Additional CSS for h1 */
+.text {
+  background: repeating-linear-gradient(to right,#f31986,#ef9001);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+
+/* Keep your existing CSS for other elements */
+
+
+   .inside-container {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(to right, #f40782, hwb(51 6% 6%),#fcaf09);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1000%;
+  overflow: hidden; /* Ensure the slider doesn't overflow its container */
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: 0;
+  display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: 0;
+}
+
+.slider-wrapper .image-list {
+  display: flex; /* Change from grid to flex */
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  width: 100%; /* Fill the available width */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+  flex: 0 0 325px; /* Set the width of the images */
+  height: 400px;
+  object-fit: cover;
+}
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: auto;
+  display: center;
+  align-items: auto;
+}
+
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    flex: 0 0 280px; /* Set the width of the images for smaller screens */
+    height: 380px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+</style>
+    <script >const initSlider = () => {
+      const imageList = document.querySelector(".slider-wrapper .image-list");
+      const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+      const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+      const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+      const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+      // Handle scrollbar thumb drag
+      scrollbarThumb.addEventListener("mousedown", (e) => {
+          const startX = e.clientX;
+          const thumbPosition = scrollbarThumb.offsetLeft;
+          const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+          // Update thumb position on mouse move
+          const handleMouseMove = (e) => {
+              const deltaX = e.clientX - startX;
+              const newThumbPosition = thumbPosition + deltaX;
+
+              // Ensure the scrollbar thumb stays within bounds
+              const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+              const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+              scrollbarThumb.style.left = `${boundedPosition}px`;
+              imageList.scrollLeft = scrollPosition;
+          }
+
+          // Remove event listeners on mouse up
+          const handleMouseUp = () => {
+              document.removeEventListener("mousemove", handleMouseMove);
+              document.removeEventListener("mouseup", handleMouseUp);
+          }
+
+          // Add event listeners for drag interaction
+          document.addEventListener("mousemove", handleMouseMove);
+          document.addEventListener("mouseup", handleMouseUp);
+      });
+
+      // Slide images according to the slide button clicks
+      slideButtons.forEach(button => {
+          button.addEventListener("click", () => {
+              const direction = button.id === "prev-slide" ? -1 : 1;
+              const scrollAmount = imageList.clientWidth * direction;
+              imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          });
+      });
+
+       // Show or hide slide buttons based on scroll position
+      const handleSlideButtons = () => {
+          slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+          slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+      }
+
+      // Update scrollbar thumb position based on image scroll
+      const updateScrollThumbPosition = () => {
+          const scrollPosition = imageList.scrollLeft;
+          const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+          scrollbarThumb.style.left = `${thumbPosition}px`;
+      }
+
+      // Call these two functions when image list scrolls
+      imageList.addEventListener("scroll", () => {
+          updateScrollThumbPosition();
+          handleSlideButtons();
+      });
+  }
+
+  window.addEventListener("resize", initSlider);
+  window.addEventListener("load", initSlider);</script>
+  </head>
+  <body>
+
+  <h1 class="text">Our Services</h1>
+    <div class="inside-container">
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list">
+          <img src="https://i.ibb.co/BPN07kx/Team-Formation-27-10-2023.jpg" alt="Team-Formation-27-10-2023">
+          <img src="https://i.ibb.co/bv9xZ9K/Judging-and-Evaluation-27-10-2023.jpg" alt="Judging-and-Evaluation-27-10-2023">
+          <img src="https://i.ibb.co/T2gm9LS/Event-Promotion-27-10-2023.jpg" alt="Event-Promotion-27-10-2023">
+          <img src="https://i.ibb.co/VNBzJKV/Task-and-Progress-Tracking-27-10-2023.jpg" alt="Task-and-Progress-Tracking-27-10-2023">
+          <img src="https://i.ibb.co/Ny2PbDb/Feedback-and-Surveys-27-10-2023.jpg" alt="Feedback-and-Surveys-27-10-2023">
+          <img src="https://i.ibb.co/2M6Pr8D/Hackat.png" alt="Hackat">
+          <img src="https://i.ibb.co/dK0qwR8/Virtual-Team-building-activities.png" alt="Virtual-Team-building-activities" >
+        </ul>
+
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-text">
+      <p>&copy; 2023 HackathonHQ</p>
+      <p>Contact us at: pamudurtivenkatesh@gmail.com</p>
+    </div>
+  </div>
+</footer>

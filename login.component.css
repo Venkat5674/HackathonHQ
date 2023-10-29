@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://i.ibb.co/nL2ShN3/pexels-junior-teixeira-2047905.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(145, 136, 136, 0.453);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(12, 12, 12, 0.467);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.form-group i.fas {
+  color: #ccc;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+h4 {
+  color: #ffffff;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.underlined-input {
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.underlined-input:focus {
+  border-color: #799bc0;
+  outline: none;
+}
+
+.form-group.inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group.inline a {
+  margin-left: 10px;
+}
+
+.form-group i {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: #ccc;
+  font-size: 20px;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  background: linear-gradient(45deg, #f9fbf8, #ede9e9);
+  border: none;
+  border-radius: 2px;
+  color: #333;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px 200px;
+  transition: background 0.3s ease;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: auto;
+}
+
+button {
+  width: 200px;
+  height: 70px;
+  background: linear-gradient(to left top, #550caf 50%, #d10505 50%);
+  border-style: none;
+  color: #ffffff00;
+  font-size: 23px;
+  letter-spacing: 3px;
+  font-family: 'Lato';
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0px;
+  overflow: hidden;
+  transition: all .5s;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+}
+
+button span {
+  position: absolute;
+  display: block;
+}
+
+button span:nth-child(1) {
+  height: 3px;
+  width: 200px;
+  top: 0px;
+  left: -200px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #ff1803);
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  animation: span1 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes span1 {
+  0% {
+    left: -200px
+  }
+  100% {
+    left: 200px;
+  }
+}
+
+button span:nth-child(2) {
+  height: 70px;
+  width: 3px;
+  top: -70px;
+  right: 0px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0008ff);
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  animation: span2 2s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes span2 {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 70px;
+  }
+}
+
+button span:nth-child(3) {
+  height: 3px;
+  width: 200px;
+  right: -200px;
+  bottom: 0px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), #0097fb);
+  border-top-left-radius: 1px;
+  border: bottom left radius 1px;
+  border-bottom-right-radius: 1px;
+  animation: span2 2s linear infinite;
+  animation-delay: 2s;
+}
+
+
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+i {
+  color: #ffc371;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
+}

@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://i.ibb.co/f8bMS28/pexels-toni-cuenca-619419.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+  background-attachment: fixed;
+
+}
+
+.container {
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(229, 231, 233, 0.195);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(24, 23, 23, 0.573);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+h4 {
+  color:#ffffff;
+}
+h2 {
+  margin-top: 0;
+  text-align: center;
+  color:#ffffff;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color:#ffffff;
+}
+.underlined-input {
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.underlined-input:focus {
+  border-color: #799bc0;
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #799bc0;
+}
+
+.form-group i {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: #ccc;
+  font-size: 20px;
+}
+.center-button {
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 12px 200px; /* Adjust the width as needed */
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #080808fe;
+  color: rgb(239, 238, 236);
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: rgb(255, 255, 255);
+}
+
+i.fas.fa-envelope {
+  color: #ffffff;
+}
+i.fas.fa-user {
+  color:#ffffff;
+}

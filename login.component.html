@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="login.component.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Log in</h2><br>
+        <form id="register-form" (submit)="onLogin()">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" [(ngModel)]="loginModel.email" class="underlined-input" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                  <input type="{{ passwordVisible ? 'text' : 'password' }}" id="password" name="password" [(ngModel)]="loginModel.password" class="underlined-input" required/>
+                  <i class="fas" [ngClass]="{ 'fa-eye': passwordVisible, 'fa-eye-slash': !passwordVisible }" (click)="togglePasswordVisibility()" style="color: rgb(255, 255, 255);"></i>
+                </div><br>
+
+
+            <div class="form-group inline">
+                <label for="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me"> Remember Me
+                </label>
+                <a routerLink="/forgotpassword" style="color: #007bff;">Forgot Password?</a>
+            </div><br>
+
+            <div class="form-group center-button">
+                <button type="submit">Log in
+
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+
+            </div>
+        </form>
+        <div class="error-message">
+            {{ res.message }}
+        </div><br>
+        <h4 style="text-align: center;">Don't have an account? <a routerLink="/register" routerLinkActive="active" style="color: #007bff;">Register Now</a></h4>
+    </div>
+</body>
+</html>

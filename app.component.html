@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HackathonHQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="app.component.css">
+
+</head>
+<body>
+    <div class="navbar">
+      <header a href="/home">HackathonHQ</header>
+        <a href="/home" onclick="showHome()">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a routerLink="/register" routerLinkActive="active" onclick="">
+          <i class="fas fa-sign-in-alt"></i>
+            <span>Register</span>
+        </a>
+        <a routerLink="/login" routerLinkActive="active" onclick="">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Login</span>
+        </a>
+        <a routerLink="/team" routerLinkActive="active" onclick="">
+          <i class="fas fa-user"></i>
+            <span>Team Register</span>
+        </a>
+        <a routerLink="/mentor" routerLinkActive="active" onclick="">
+            <i class="fas fa-user"></i>
+            <span>Mentor Register</span>
+            <a></a>
+        </a>
+    </div>
+
+    </body>
+</html>
+
+<router-outlet></router-outlet>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Basic styling for the landing page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://i.ibb.co/Yk61pJp/abstract-digital-grid-black-background.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1e1ecffd;
+            color: #fff;
+            text-decoration: none;
+            border: auto;
+            border-radius: 5px;
+            align-items: center;
+            text-align: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #13fa83;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to Our Website HackathonHQ</h1><br>
+       <br> <a href="register/" class="cta-button">Learn More</a>
+       <a href="login/" class="cta-button">About US</a>
+    </div>
+
+    <script>
+        // You can add JavaScript code here if needed
+    </script>
+</body>
+</html>
